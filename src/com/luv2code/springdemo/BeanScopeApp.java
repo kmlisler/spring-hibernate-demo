@@ -17,9 +17,6 @@ public class BeanScopeApp {
 		
 		System.out.println("Coach referance address        :" + theCoach);
 		System.out.println("Alpha coach referance address  :" + alphaCoach);
-
-		
-
 		
 		// close the context
 		context.close();

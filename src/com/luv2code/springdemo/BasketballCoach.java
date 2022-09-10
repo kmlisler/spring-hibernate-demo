@@ -1,7 +1,7 @@
 package com.luv2code.springdemo;
 
 public class BasketballCoach implements Coach {
-	
+
 	public BasketballCoach(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
@@ -13,11 +13,18 @@ public class BasketballCoach implements Coach {
 		// TODO Auto-generated method stub
 		return "GO DUUUUUUUUUUNKKKKKKKKKKKKKK";
 	}
-
 	@Override
 	public String getDailyFortune() {
 		// TODO Auto-generated method stub
-		return "Jump jump"+fortuneService.getFortune();
+		return "Jump jump" + fortuneService.getFortune();
 	}
-	
+	// create bean init method
+	public void doMyStartUpStuff() {
+		System.out.println("Bean startup stuff worked");
+	}
+	// create bean destroy method
+	public void doMyCleanUpStuff() {
+		System.out.println("Bean destroy stuff worked");
+	}
+
 }
