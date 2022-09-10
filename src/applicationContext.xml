@@ -13,8 +13,15 @@
     </bean>
     <!-- Define your beans here -->
     
+    <!-- Define the dependency -->
+    <bean id="myFortune"
+     class="com.luv2code.springdemo.HappyFortuneService">
+    </bean>
+    
  	<bean id="myCoach"
- 		class="com.luv2code.springdemo.BasketballCoach">	 		
+ 		class="com.luv2code.springdemo.BasketballCoach">
+ 		<!-- set up the const injection -->
+    	<constructor-arg ref="myFortune"/>	 		
  	</bean>
     
 </beans>
