@@ -12,6 +12,8 @@ public class AnnotationDemoApp {
 		Coach theCoach = context.getBean("basketballCoach",Coach.class);
 		// call a method on the bean
 		System.out.println(theCoach.getDailyWorkout());
+		
+		System.out.println(theCoach.getDailyFortune());
 		// close context
 		context.close();
 
