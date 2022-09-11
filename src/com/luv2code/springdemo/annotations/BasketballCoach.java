@@ -7,7 +7,9 @@ import org.springframework.stereotype.Component;
 // if we dont give the bean id for component. default bean id will be basketballCoach
 @Component
 public class BasketballCoach implements Coach {	
-	
+	// field injection, create default const for fortune service
+	// and inject it to class
+	@Autowired
 	private FortuneService fortuneService;
 	
 	/*// constructor injection
@@ -19,6 +21,7 @@ public class BasketballCoach implements Coach {
 	}*/
 	
 	
+	/*
 	// setter injection
 	@Autowired
 	public void setFortuneService(FortuneService fortuneService) {
@@ -29,7 +32,8 @@ public class BasketballCoach implements Coach {
 	public BasketballCoach() {
 		System.out.println("default const BasketballCoach");
 	}
-
+	*/
+	
 	@Override
 	public String getDailyWorkout() {
 		return "GO DUNK MA**";
