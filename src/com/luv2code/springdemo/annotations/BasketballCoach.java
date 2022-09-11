@@ -1,6 +1,7 @@
 package com.luv2code.springdemo.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 // @Component("myCoach")
@@ -9,7 +10,11 @@ import org.springframework.stereotype.Component;
 public class BasketballCoach implements Coach {	
 	// field injection, create default const for fortune service
 	// and inject it to class
+	
+	// bu componentte hangi fortuneservice'e(hangi spesifik bean'e) gideceğini söylemezsek hata alırız çünkü 3 tane fortuneservice'i implement eden bean var
+	// bu yüzden Qualifier ile hangisine autowire edeceğimizi seçebiliriz
 	@Autowired
+	@Qualifier("databaseFortuneService")
 	private FortuneService fortuneService;
 	
 	/*// constructor injection

@@ -3,12 +3,12 @@ package com.luv2code.springdemo.annotations;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HappyFortuneService implements FortuneService {
+public class RESTFortuneService implements FortuneService {
 
 	@Override
 	public String getFortune() {
 		
-		return "happyFortuneS : good luck have fun";
+		return "restFortune: gl hf";
 	}
 
 }
