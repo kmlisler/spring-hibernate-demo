@@ -14,7 +14,7 @@ public class BasketballCoach implements Coach {
 	// bu componentte hangi fortuneservice'e(hangi spesifik bean'e) gideceğini söylemezsek hata alırız çünkü 3 tane fortuneservice'i implement eden bean var
 	// bu yüzden Qualifier ile hangisine autowire edeceğimizi seçebiliriz
 	@Autowired
-	@Qualifier("databaseFortuneService")
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 	
 	/*// constructor injection
