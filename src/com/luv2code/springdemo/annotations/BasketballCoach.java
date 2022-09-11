@@ -1,5 +1,8 @@
 package com.luv2code.springdemo.annotations;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -47,5 +50,14 @@ public class BasketballCoach implements Coach {
 	public String getDailyFortune() {	
 		return fortuneService.getFortune();
 	}
+	@PostConstruct
+	public void doMyStartupStuff() {
+		System.out.println("startup");
+	}
+	@PreDestroy
+	public void doMyCleanupStuff() {
+		System.out.println("cleanup");
+	}
+	
 
 }
